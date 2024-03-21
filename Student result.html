@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Result Management System</title>
+<style>
+/* CSS styles */
+/* Insert CSS styles provided earlier */
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Student Result Management System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Add New Result</h2>
+    <form action="add_result.php" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required><br>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br>
+        
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" name="marks" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>All Results</h2>
+    <?php
+    // Include PHP script to retrieve all results
+    include 'get_results.php';
+    ?>
+</div>
+
+<footer>
+    <p>&copy; 2024 Student Result Management System</p>
+</footer>
+
+</body>
+</html>
